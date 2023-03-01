@@ -1,0 +1,34 @@
+Q2. What is the difference between the functions loc and iloc in pandas.DataFrame?
+Ans--> In Pandas, loc and iloc are used for indexing and selecting data from a dataframe.
+
+loc is used for label-based indexing, which means you can use the row and column labels to access data. For example, to access data in a row with a specific index label, you can use loc like this:
+df.loc[2]  # get the row with index label 2
+
+You can also use loc to select specific rows and columns based on label names, like this:
+df.loc[[0, 1], ['course_name', 'duration']]  # get rows 0 and 1 and columns 'course_name' and 'duration'
+
+On the other hand, iloc is used for integer-based indexing, which means you can use integer indices to access data. For example, to access data in a row with a specific integer index, you can use iloc like this:
+df.iloc[2]  # get the row with integer index 2
+
+You can also use iloc to select specific rows and columns based on integer positions, like this:
+df.iloc[[0, 1], [0, 1]]  # get rows 0 and 1 and columns 0 and 1
+
+So, the main difference between loc and iloc is the type of indexing used. loc uses label-based indexing while iloc uses integer-based indexing.
+
+Q6. What do you understand about the windows function in pandas and list the types of windows functions?
+Ans--> In pandas, the windows functions are used to perform calculations on a rolling window of data. The window is a fixed-size subset of the data, which moves along the data as the calculation is performed.
+
+The window functions can be divided into two main categories:
+
+1.Rolling window functions - These functions are used to perform calculations on a fixed-size window of data, which moves along the data. Some examples of rolling window functions are rolling, expanding, rolling_mean, rolling_sum, rolling_max, rolling_min, rolling_apply, etc.
+
+2.Expanding window functions - These functions are used to perform calculations on all of the data available up to that point in time. The window size is not fixed and expands with each new data point. Some examples of expanding window functions are cumsum, cummax, cummin, cumprod, expanding_mean, expanding_sum, expanding_apply, etc.
+
+Rolling window functions can be further classified into three types based on how the window moves:
+
+1.Centered window - In this type of window, the window is centered around each data point. It includes an equal number of data points on either side of the current data point.
+
+2.Trailing window - In this type of window, the window moves in a forward direction, including the current data point and the previous data points.
+
+3.Leading window - In this type of window, the window moves in a backward direction, including the current data point and the next data points.
+
